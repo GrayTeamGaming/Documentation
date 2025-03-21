@@ -1,0 +1,62 @@
+# Site Details
+site_name: GrayTeamGaming Documentation
+site_url: https://sitename.example
+
+# Theme Configuration
+theme:
+  name: material
+  icon:
+    logo: fontawesome/solid/w
+  favicon: 
+  features:
+    - navigation.footer
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+# Emoji Extension
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Code Syntax Highlighting Extension
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# CSS Config
+extra_css:
+  - css/extra.css
+
+# Footer Config
+copyright: Copyright &copy; 2025 GrayTeamGaming
